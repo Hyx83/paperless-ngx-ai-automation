@@ -1,0 +1,30 @@
+# Paperless KI - Versand der Konflikt-CSV
+#
+# Datei auf dem Server:
+# /opt/paperless_data/scripts/paperless-ai-mail.conf
+#
+# Rechte:
+# chmod 600 /opt/paperless_data/scripts/paperless-ai-mail.conf
+
+AI_REPORT_EMAIL_ENABLED=1
+
+# SMTP-Server
+AI_REPORT_SMTP_HOST='smtp.example.de'
+AI_REPORT_SMTP_PORT=587
+
+# Erlaubt: starttls | ssl | none
+# Typisch:
+#   Port 587 -> starttls
+#   Port 465 -> ssl
+AI_REPORT_SMTP_SECURITY='starttls'
+
+# SMTP-Anmeldung
+AI_REPORT_SMTP_USER='paperless@example.de'
+AI_REPORT_SMTP_PASSWORD='HIER_PASSWORT_EINTRAGEN'
+
+# Absender und Empfänger
+AI_REPORT_MAIL_FROM='paperless@example.de'
+AI_REPORT_MAIL_TO='empfaenger@example.de'
+
+# Header-only CSV ohne Konflikte automatisch löschen.
+AI_REPORT_DELETE_EMPTY_CSV=1

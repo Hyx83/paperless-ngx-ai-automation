@@ -1,0 +1,15 @@
+# Ergänzungen für /opt/paperless/paperless.conf
+
+# KI-Nachbearbeitung nach jedem erfolgreichen Dokumentimport.
+PAPERLESS_POST_CONSUME_SCRIPT=/opt/paperless_data/scripts/paperless-ai-post-consume.sh
+
+# Erst mit 0 testen, danach auf 1 stellen.
+AI_POST_CONSUME_APPLY=0
+
+# Beispiel für einen LXC mit 6 sichtbaren CPU-Kernen.
+# An die eigene Umgebung anpassen.
+PAPERLESS_TASK_WORKERS=3
+PAPERLESS_THREADS_PER_WORKER=2
+
+# Optional: Mailabruf alle 2 Minuten.
+# PAPERLESS_EMAIL_TASK_CRON=*/2 * * * *
